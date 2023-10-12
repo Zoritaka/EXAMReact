@@ -1,15 +1,30 @@
-body{
-    background-color: #242121;
-    margin-top: 50px;
-}
-.container{
+.Rcontainer{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.block_form{
+.Rlogo{
+    display: flex;
+    align-items: center;
+    z-index: 999999;
+}
+.Rlogo a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 50px;
+    text-decoration: none;
+}
+.Rlogo img{
+    width: 60px;
+    height: auto;
+    margin: 5px;
+    padding: 10px 0;
+}
+.Rblock_form{
     display: flex;
     justify-content: space-between;
-    padding: 40px 30px 50px 30px;
+    padding: 50px 30px 30px 30px;
     width: 50%;
     background-color: #dfdfdf;
     color: rgb(48,46,46);
@@ -17,84 +32,80 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0,6);
     border-radius: 15px;
 }
-.block_main{
+.Rblock_main{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.block2{
+.Rblock2{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.block3{
+.Rblock3{
     width: 48%;
 }
-.block2 .block_child2,.block2 .block_child{
+.Rblock2 .Rblock_child2,.Rblock2 .Rblock_child{
     width: 48%;
 }
 
-.block_child{
+.Rblock_child{
     display: flex;
 }
-.block_child input{
+.Rblock_child input{
     width: 100%;
 }
-.block_child2{
+.Rblock_child2{
     display: flex;
     justify-content: space-between;
 }
-.block_child2 input, .block_child2 select{
+.Rblock_child2 input, .Rblock_child2 select{
     width: 45%;
 }
-.block_check{
+.Rblock_check{
     display: flex;
     flex-direction: column;
     width: 48%;
 }
-.txt{
+.Rtxt{
     display: flex;
     justify-content: space-between;
     font-size: 26px;
     padding: 10px;
 }
-.txt div{
+.Rtxt div{
     width: 48%;
 }
-input{
+.Rblock_main input{
     background-color: rgba(0,0,0,0);
     color: rgb(31, 31, 31);
     border: none;
     border-bottom: 1px solid rgb(178,178,178);
 }
-img{
-    width: 32px;
-    height: 32px;
-    margin: 5px;
-}
-select{
+.Rblock_main select{
     background-color: rgba(0,0,0,0);
     color: rgb(26, 24, 24);
     border: none;
     border-bottom: 1px solid rgb(178,178,178);
-}
-.btnBlock{
+} 
+.RbtnBlock{
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
-.btnSubmitt{
+.RbtnSubmit{
     display: flex;
     justify-content: center;
     background-color: rgb(0,139,139);
+    text-decoration: none;
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
-    width: 25%;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100px;
     cursor: pointer;
 }
-.date{
+.Rdate{
     color: rgb(26, 24, 24);
 }

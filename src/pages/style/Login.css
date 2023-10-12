@@ -1,14 +1,11 @@
-body{
-    background-color: #242121;
-    margin-top: 30px;
-}
-.container{
+.Lcontainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
 }
-.block_form{
+.Lblock_form{
     display: flex;
     justify-content: space-between;
     padding: 40px 30px 50px 30px;
@@ -20,48 +17,46 @@ body{
     border-radius: 15px;
     z-index: 999999;
 }
-.block_main{
+.Lblock_main{
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
 }
-.blockLog{
+.Lblock{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.blockLog .block_child2,.blockLog .block_child{
+.Lblock .Lblock_child2,.block .Lblock_child{
     width: 100%;
 }
 
-.block_child{
+.Lblock_child{
     display: flex;
 }
-.block_child input{
-    width: 100%;
-}
-.txt{
+.Ltxt{
     display: flex;
     justify-content: space-between;
     font-size: 26px;
     padding: 10px;
 }
-input{
+.Lblock_child input{
+    width: 100%;
     background-color: rgba(0,0,0,0);
     color: rgb(31, 31, 31);
     border: none;
     border-bottom: 1px solid rgb(178,178,178);
-}
+} 
 
-.Anime{
+.LAnime{
     display: block;
     position: absolute;
     width: 600px;
     height: auto;
     z-index: 0;
 }
-.btnSubmit{
+.LbtnSubmit{
     display: flex;
     justify-content: center;
     background-color: rgb(0,139,139);
@@ -73,26 +68,27 @@ input{
     width: 100%;
     cursor: pointer;
 }
-.date{
+.Ldate{
     color: rgb(26, 24, 24);
 }
-.logoLog{
+.Llogo{
     display: flex;
     align-items: center;
     z-index: 999999;
 }
-.logoLog a{
+.Llogo a{
     font-family: Arial, Helvetica, sans-serif;
     color: aliceblue;
     font-size: 50px;
+    text-decoration: none;
 }
-.logoLog img{
-    width: 55px;
+.Llogo img{
+    width: 60px;
     height: auto;
     padding: 10px 0;
 }
-.block_form a{
+.Lblock_main a{
     color: rgb(104, 105, 172);
     text-decoration: none;
     margin-top: 15px;
-}
+} 
