@@ -1,37 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import './style/Login.css';
 import { Link } from 'react-router-dom';
 const Login = () => {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [Blink, setBlink] = useState('');
+    function submit(){
+        let user = JSON.parse(localStorage.getItem("User"))
+        if (user != null){
+            if(name != '' || password != ''){
+                if(user.userName == name && user.password == password){
+                    user.login = true
+                    localStorage.setItem("User", JSON.stringify(user))
+                    setBlink('/')
+                }
+            }
+        }
+    }
+    function ButtonLogin() {
+        return (
+            <Link to={Blink}>
+                <button className="btnSubmit" onClick={() => submit(name, password)}>
+                    Entarence
+                </button>
+            </Link>
+        );
+    }
+
     function Player({}){
         return (
-            <body>
-                <div class="container">
-                    <div class="logo">
+            <form action="">
+                <div className="container">
+                    <div className="logoLog">
                         <img src={require("./img/spider.png")} alt=""/>
                         <Link to={"/"}>𝐀𝐧𝐢𝐦𝐞̷𝐒𝐭𝐨𝐫𝐞</Link>
                     </div>
-                    <div class="block_form">
-                        <div class="block_main">
-                            <div class="txt">Login</div>
-                            <div class="block">
-                                <div class="block_child">
+                    <div className="block_form">
+                        <div className="block_main">
+                            <div className="txt">Login</div>
+                            <div className="blockLog">
+                                <div className="block_child">
                                     <img src={require("./img/userReg.png")}/>
-                                    <input class="userName" type="text" placeholder="Username"/>
+                                    <input 
+                                        className="userName"
+                                        type="text"
+                                        placeholder="Username"
+                                        onChange={(str) => setName(str.target.value)}
+                                    />
                                 </div>
                             </div><br/>
-                            <div class="block">
-                                <div class="block_child">
-                                    <img src={require("./img/lock.png")} alt=""/>
-                                    <input class="password" type="password" placeholder="Password"/>                                
+                            <div className="blockLog">
+                                <div className="block_child">
+                                    <img src={require("./img/lock.png")} alt=""/>                                    
+                                    <input 
+                                        className="password"
+                                        type="password"
+                                        placeholder="password"
+                                        onChange={(str) => setPassword(str.target.value)}
+                                    />                               
                                 </div>
                             </div><br/><br/>
-                            <button class="btnSubmit">Entrance</button>
-                            <a href="Registration.html">Unregistered?</a>
+                            <ButtonLogin/>
+                            <Link to={"/Registration"}>Unregistered?</Link>
                         </div>
                     </div>
                 </div>
-                <script src="./script/Login-script.js"></script>
-            </body>
+            </form>
         );
     }//Player()
 

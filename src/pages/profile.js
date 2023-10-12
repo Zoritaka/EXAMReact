@@ -12,27 +12,27 @@ const Profile = () => {
     function Player({}){
         return (
             <body>
-                <div class="Home">
-                    <div class="Navbar">
+                <div className="Home">
+                    <div className="Navbar">
                         <Link to={"/Home"} class="Title">
                             <img src={require("./img/spider.png")}/>
                             <h2>𝐀𝐧𝐢𝐦𝐞̷𝐒𝐭𝐨𝐫𝐞</h2>
                         </Link>
-                        <div class="Search">
-                            <button class="btnSearch1"><img src={require("./img/search.png")}/></button>
-                            <input class="txtSearch1" type="text" placeholder="Sword Art Online"/>
+                        <div className="Search">
+                            <button className="btnSearch1"><img src={require("./img/search.png")}/></button>
+                            <input className="txtSearch1" type="text" placeholder="Sword Art Online"/>
                         </div>
-                        <div class="Navbar_Btn">
+                        <div className="Navbar_Btn">
                             <Link to={"/Cart"} class="Shop"><img src={require("./img/shop.png")}/></Link>
-                            <button class="User"><img src={require("./img/user.png")}/></button>
+                            <button className="User"><img src={require("./img/user.png")}/></button>
                         </div>
                     </div>
                     
-                    <div class="Space"></div>
+                    <div className="SpacePro"></div>
 
-                    <div class="MainBlock">
+                    <div className="MainBlockPro">
                         <h1>꧁༺ 𝓨𝓸𝓾𝓻 𝓹𝓻𝓸𝓯𝓲𝓵𝓮 ༻꧂</h1>
-                        <div class="block">
+                        <div className="blockPro">
 
                         </div>
                     </div>

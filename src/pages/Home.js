@@ -1,57 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './style/Home.css';
 import { Link } from 'react-router-dom';
 
-function addToCart({id}){
-    // localStorage.removeItem("Items")
-    let items = JSON.parse(localStorage.getItem("Items")) || []
-    items.push(id)
-    localStorage.setItem("Items", JSON.stringify(items))
-  }
-
-function funcLogin({m}) {
-    let user = JSON.parse(localStorage.getItem("User"))
-    if(user == null){
-      document.location.href = "Login.html";
-    }
-    else{
-      if(user.login == true){
-        document.location.href = "profile.html";
-      }
-      else{
-        document.location.href = "Login.html";
-      }
-    }
-}
 
 const Home = () => {
+    const [Blink, setBlink] = useState('');
+    function addToCart({id}){
+        // localStorage.removeItem("Items")
+        let items = JSON.parse(localStorage.getItem("Items")) || []
+        items.push(id)
+        localStorage.setItem("Items", JSON.stringify(items))
+      }
+    useEffect(()=>{
+        let user = JSON.parse(localStorage.getItem("User"))
+        if(user != null){
+            if(user.login == true){
+                setBlink('/Profile')
+            }else{
+                setBlink('/Login')
+            }
+        }
+        else{
+            setBlink('/Login')
+        }
+    });
+    function ButtonUser() {
+        return (
+            <Link to={Blink}>
+                <button className="User">
+                    <img src={require("./img/user.png")}/>
+                </button>
+            </Link>
+        );
+    }
     function Player({}){
         return (
             <body>
-                <div class="Home">
+                <div className="Home">
                     <div class="Navbar">
-                        <Link to={'/'} class="Title">
+                        <Link to={'/'} className="Title">
                             <img src={require("./img/spider.png")}alt=""/>
                             <h2>𝐀𝐧𝐢𝐦𝐞̷𝐒𝐭𝐨𝐫𝐞</h2>
                         </Link>
-                        <div class="Search">
-                            <button class="btnSearch1"><img src={require("./img/search.png")} alt=""/></button>
-                            <input class="txtSearch1" type="text" placeholder="Sword Art Online"/>
+                        <div className="Search">
+                            <button className="btnSearch1"><img src={require("./img/search.png")} alt=""/></button>
+                            <input className="txtSearch1" type="text" placeholder="Sword Art Online"/>
                         </div>
-                        <div class="Navbar_Btn">
-                            <Link to={"/Cart"} class="Shop"><img src={require("./img/shop.png")}/></Link>
-                            <button class="User"><img src={require("./img/user.png")}/></button>
+                        <div className="Navbar_Btn">
+                            <Link to={"/Cart"} className="Shop"><img src={require("./img/shop.png")}/></Link>
+                            <ButtonUser
+                                src = {'/Login'}
+                            />
                         </div>
                     </div>
                     
-                    <div class="Space"></div>
-                    <div class="AnimeSlider">
+                    <div className="AnimeSlider">
  
                     </div>
-                    <div class="MainBlock">
+                    <div className="MainBlock">
 
-                    <div class="ListAnime">
-                    </div>
+                        <div className="ListAnime">
+                        </div>
                     </div>
                     <button onclick="topFunction()" id="myBtn">
                         <img src={require("./img/up-arrow.png")}/>     

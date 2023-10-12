@@ -114,12 +114,12 @@ a{
     color: aliceblue;
     text-decoration: none;
 }
-.Space{
+.SpacePro{
     position: static;
     padding-top: 60px;
 }
 
-.MainBlock{
+.MainBlockPro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,7 +128,7 @@ a{
     font-family: sans-serif;
     color: aliceblue;
 }
-.block{
+.blockPro{
     display: flex;
     transform: scale(1.1);
     width: 690px;
@@ -139,7 +139,7 @@ a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
 }
-.block hr{
+.blockPro hr{
     border: 1px solid aliceblue;
     width: 100%;
 }
