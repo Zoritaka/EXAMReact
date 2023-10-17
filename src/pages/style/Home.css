@@ -83,8 +83,8 @@ body{
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
     margin-left: 50px;
+    color: aliceblue;
     text-decoration: none;
 }
 .HTitle img{
@@ -94,5 +94,67 @@ body{
 }
 .HSpace{
     position: static;
-    padding-top: 60px;
+    padding-top: 80px;
+}
+.HAnimeSlider{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.HAnimeBlock{
+    display: flex;
+    color: aliceblue;
+    border-radius: 6px;
+    width: 33%;
+    transform: scale(0.85);
+    font-family: sans-serif;
+    box-shadow: 0px 5px 1px rgba(0,0,0,0.3);
+}
+.HAnimeBlock:hover{
+    transform: scale(0.88);
+}
+.HAnimeBlock_Txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10px 15px 15px;
+}
+.HAnimeBlock_Txt h1{
+    font-size: 28px;
+}
+.HAnimeBlock_Txt a{
+    border: 1px solid aliceblue;
+    width: 75px;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+.HImgAnime img{
+    width: 218px;
+    height: 321px;
+    display: block;
+    border-radius: 5px;
+    border-bottom: 1px solid aliceblue;
+    border-right: 6px double aliceblue;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+    transform: scale(1.1) rotate(-2deg);
+    margin-right: 10px;
+}
+.HAnimeBlock_Txt p{
+    margin: 3px;
+    font-size: 16px;
+}
+.HAnimeBlock_Txt h1{
+    margin: 10px 0;
+}
+.v1{
+    background-color: rgb(65,95,113);
+}
+.v2{
+    background-color: rgb(87,63,113);
+}
+.v3{
+    background-color: rgb(115,63,84);
 }

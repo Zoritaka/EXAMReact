@@ -1,11 +1,28 @@
 *{
     box-sizing: border-box;
 }
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0);
+}
+#myBtn img{
+    width: 32px;
+    height: 32px;
+}
 body{
     background-color: #242121;
     margin: 0;
 }
-.PNavbar{
+.INavbar{
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -14,73 +31,72 @@ body{
     background-color: rgb(41,40,40);
     z-index: 999999;
 }
-.PNavbar h2{
+.INavbar h2{
     margin: 0;
 }
-.PSearch{
+.ISearch{
     display: flex;
     width: 40%;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
 }
-.PSearch input,.PSearch button, .PSearch, .PSearch select{
+.ISearch input,.ISearch button, .ISearch, .ISearch select{
     background-color: #373737;
     border: none;
 }
-.PSearch input{
+.ISearch input{
     border-radius: 0px 5px 5px 0;
     color: white;
     margin-left: 20px;
     width: 100%;
     outline: none;
 }
-.PSearch button{
+.ISearch button{
     border-radius: 5px 0 0 5px;
     width: 16px;
     cursor: pointer;
 }
-.PSearch img{
+.ISearch img{
     width: 16px;
     height: 16px;
     align-items: end;
 }
-.PUser{
+.IUser{
     background-color: rgb(41,40,40);
     border: none;
 }
-.PShop{
+.IShop{
     background-color: rgb(41,40,40);
     border: none;
 }
-.PNavbar_Btn{
+.INavbar_Btn{
     display: flex;
     align-items: center;
     margin-right: 50px;
 }
-.PNavbar_Btn a{
+.INavbar_Btn button, .INavbar_Btn a{
     padding: 0 15px;
+    cursor: pointer;
 }
-.PTitle{
+.ITitle{
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
     margin-left: 50px;
     color: aliceblue;
-    text-decoration: none;  
+    text-decoration: none;
 }
-.PTitle img{
+.ITitle img{
     width: 40px;
     height:60px;
     padding: 10px 0;
 }
-.PSpace{
+.ISpace{
     position: static;
-    padding-top: 60px;
+    padding-top: 100px;
 }
-
-.PMainBlock{
+.IMainBlock{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,55 +105,53 @@ body{
     font-family: sans-serif;
     color: aliceblue;
 }
-.Pblock{
+.Iblock{
     display: flex;
+    justify-content: space-around;
     transform: scale(1.1);
     width: 690px;
-    background-color: #8a6363;
-    border-radius: 15px;
+    background-color: #8a3030;
+    border-radius: 10px;
     padding: 20px;
     border: 1px solid aliceblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
 }
-.Pblock hr{
+.Iblock hr{
     border: 1px solid aliceblue;
     width: 100%;
 }
-.PblockImg{
+.IblockImg{
     display: flex;
     position: relative;
-    border-radius: 60px;
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 250px;
     background-color: #a87a7a;
     overflow: hidden;
+    border-radius: 5px;
     border: 2px dotted aliceblue;
     justify-content: flex-end;
     margin-right: 30px;
 } 
-.PblockImg img{
+.IblockImg img{
     transform: scale(1.2);
 }
-.Ptxt{
+.Itxt{
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    width: 60%;
 }
-.Ptxt h2, .Ptxt h3{
+.Itxt h2, .Itxt h3{
     margin: 10px 0;
 }
-.PsignOut{
-    color: aliceblue;
-    border: 1px solid aliceblue;
-    background: rgba(0,0,0,0);
-    cursor: pointer;
-    font-size: 18px;
-    text-align: center;
-    color: aliceblue;
-    text-decoration: none;  
+.Itxt2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.PsignOut:hover{
-    background-color: rgb(116, 83, 83);
-    transform: scale(1.03);
+.Itxt2 a{
+    color: wheat;
+    border: 1px solid wheat;
+    border-radius: 3px;
+    text-decoration: none;
 }

@@ -31,6 +31,7 @@ const Registration = () => {
         sex: sex,
         birthday: date,
         password: password,
+        subs: [],
         login: false //проверка, зашел ли сейчас пользователь
     }
     function click({}){
@@ -61,7 +62,7 @@ const Registration = () => {
             firstName != '' && lastName != '' && check1 != 0 &&
             check2 != 0 && sex != '' && email != ''){
             if (password == passwordCon && email.split('@').length > 1){
-                setBlink('/')
+                setBlink('/Thanks')
             }
         }
     });
